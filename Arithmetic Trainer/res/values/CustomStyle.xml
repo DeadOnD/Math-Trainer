@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="light_green">#B2DFDB</color>
+    <color name="black">#000000</color>
+    <color name="green">#8BC34A</color>
+
+    <style name="CustomTheme" parent="Theme.AppCompat.Light">
+   		 <item name="android:buttonStyle">@style/my_button</item>
+   		 <item name="android:windowBackground">@color/light_green</item>
+		<item name="android:colorBackground">@color/light_green</item>
+		<item name="android:colorForeground">@color/light_green</item>
+   		<item name="android:actionBarStyle">@style/MyActionBar</item>
+   		<item name="android:textAppearance">@style/my_text</item>e
+   		 <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+   	</style>
+   	<style name="my_text" parent="@android:style/TextAppearance.Large">
+   	    <item name="android:textSize">20sp</item> 
+        <item name="android:textStyle">bold</item>
+   	 </style>
+   	 
+   	 <style name="MyActionBar"
+           parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@color/green</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/green</item>
+    </style>	 
+    	<style name="my_button" parent="@android:style/Widget.Button">
+        
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/my_text</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+
+    </style>
+</resources>

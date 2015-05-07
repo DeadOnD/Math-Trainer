@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:scrollbarStyle="insideOverlay" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutWork"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layoutHelloAndTries"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/infoTextView"
+                style="@style/infolabel"
+                android:layout_alignParentLeft="true"
+                android:text="@string/text_hello" />
+
+            <TextView
+                android:id="@+id/TriesLabel"
+                style="@style/infolabel"
+                android:layout_toLeftOf="@+id/TriesNumber"
+                android:text="@string/tries_label" />
+
+            <TextView
+                android:id="@id/TriesNumber"
+                style="@style/infolabel.padded"
+                android:layout_toLeftOf="@+id/TriesSeparator"
+                android:text="@string/default_tries_number" />
+
+            <TextView
+                android:id="@id/TriesSeparator"
+                style="@style/infolabel.center"
+                android:layout_toLeftOf="@+id/TriesMax"
+                android:text="@string/default_tries_separator" />
+
+            <TextView
+                android:id="@id/TriesMax"
+                style="@style/infolabel"
+                android:layout_alignParentRight="true"
+                android:text="@string/default_max_tries" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayoutTimeAndExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/chronoText"
+                    style="@style/infolabel.center"
+                    android:text="@string/default_chrono_time" />
+
+                <TextView
+                    android:id="@+id/Operand1Label"
+                    style="@style/oplabel"
+                    android:text="@string/sign_unknown" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Spinner
+                    android:id="@+id/OperationSpinner"
+                    android:prompt="@string/text_choose_operation" />
+
+                <TextView
+                    android:id="@+id/Operand2Label"
+                    style="@style/oplabel"
+                    android:text="@string/sign_unknown" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/EqualLabel"
+                    style="@style/oplabel.equal"
+                    android:text="@string/sign_equal" />
+
+                <EditText
+                    android:id="@+id/ProposedResultField"
+                    style="@style/oplabel.result"
+                    android:ellipsize="end"
+                    android:hint="@string/text_enter_result" >
+                    <!-- TODO remove ellipsize which is a workaround for hint not appearing, see http://code.google.com/p/android/issues/detail?id=7252 -->
+
+                    <requestFocus />
+                </EditText>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/ShowSolutionButton"
+            style="@style/butter_button"
+            android:enabled="false"
+            android:drawableLeft="@android:drawable/ic_media_play"
+            android:text="@string/text_check_solution" />
+
+        <!-- TODO: remove the following text field only needed to get a minimum width of the left panel and some padding -->
+        <TextView
+            android:id="@+id/HiddenDummyText"
+            style="@style/infolabel"
+            android:height="10dp"
+            android:minEms="20"
+            android:text="@string/sign_unknown"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/NewExerciseButton"
+            style="@style/butter_button"
+            android:drawableLeft="@android:drawable/ic_media_next"
+            android:text="@string/text_new_exercise" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/HintScroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@+id/HintText"
+            style="@style/hinttext" />
+    </ScrollView>
+
+</LinearLayout>

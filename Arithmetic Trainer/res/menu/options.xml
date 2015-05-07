@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:pmtd="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/challenge"
+        android:title="@string/challenge"
+        android:icon="@android:drawable/ic_menu_compass"
+        /> <!--  no good icon so we don't use it pmtd:showAsAction="ifRoom" /> -->
+    <item android:id="@+id/about"
+        android:title="@string/about"
+		android:icon="@android:drawable/ic_menu_info_details" />
+</menu>

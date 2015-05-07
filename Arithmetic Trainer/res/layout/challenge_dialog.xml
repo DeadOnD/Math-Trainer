@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ScrollView>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/DialogTango"
+    android:id="@+id/scrollViewChallengeDialog"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+   <LinearLayout
+        android:id="@+id/layout_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/challengeLabel"
+            style="@style/dialogtext" />
+
+        <EditText
+            android:id="@+id/editChallengeName"
+            android:hint="@string/challenge_name_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/roundsLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelRounds"
+                android:text="@string/challenge_rounds"
+            	style="@style/dialogtext.left" />
+                
+            <TextView
+                android:id="@+id/textViewRounds"
+                android:text="@string/sign_unknown"
+                style="@style/dialogtext.right" />
+                
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarRounds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:progress="0" />
+
+
+        <LinearLayout
+            android:id="@+id/operationLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelOperation"
+                android:text="@string/challenge_operation"
+                style="@style/dialogtext.left" />
+
+            <Spinner
+                android:id="@+id/challengeOperationSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/signs_array"
+                android:prompt="@string/text_choose_operation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/maxLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelMax"
+                android:text="@string/challenge_max"
+                style="@style/dialogtext.left" />
+
+            <TextView
+                android:id="@+id/textViewMax"
+                android:text="@string/sign_unknown"
+                style="@style/dialogtext.right" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarMax"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:progress="0" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMax"
+            android:text="@string/challenge_maxwhich"
+            style="@style/dialogtext" />
+
+        <LinearLayout
+            android:id="@+id/placesLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelPlaces"
+                android:text="@string/challenge_places"
+            	style="@style/dialogtext.left" />
+            <TextView
+                android:id="@+id/textViewPlaces"
+                android:text="@string/sign_unknown"
+            	style="@style/dialogtext.right" />
+            </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarPlaces"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="4"
+            android:progress="0" />
+
+        <LinearLayout
+            android:id="@+id/tableLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelTable"
+                android:text="@string/challenge_table"
+            	style="@style/dialogtext.left" />
+            <TextView
+                android:id="@+id/textViewTable"
+                android:text="@string/sign_unknown"
+            	style="@style/dialogtext.right" />
+            </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="10"
+            android:progress="0" />
+
+        <CheckBox
+            android:id="@+id/checkBoxBool1"
+            android:text="@string/sign_unknown"
+            style="@style/dialogtext" />
+
+        <CheckBox
+            android:id="@+id/checkBoxBool2"
+            android:text="@string/sign_unknown"
+            style="@style/dialogtext" />
+    </LinearLayout>
+
+</ScrollView>

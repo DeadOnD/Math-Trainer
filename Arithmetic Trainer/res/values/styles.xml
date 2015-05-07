@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources>
+<resources>
+    
+    <!-- TANGO COLORS TAKEN FROM http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines -->
+	<color name="tango_butter_1">#fce94f</color>
+	<color name="tango_butter_2">#edd400</color>
+	<color name="tango_butter_3">#c4a000</color>
+	<color name="tango_chameleon_1">#8ae234</color>
+	<color name="tango_chameleon_2">#73d216</color>
+	<color name="tango_chameleon_3">#4e9a06</color>
+	<color name="tango_orange_1">#fcaf3e</color>
+	<color name="tango_orange_2">#f57900</color>
+	<color name="tango_orange_3">#ce5c00</color>
+	<color name="tango_sky_blue_1">#729fcf</color>
+	<color name="tango_sky_blue_2">#3465a4</color>
+	<color name="tango_sky_blue_3">#204a87</color>
+	<color name="tango_plum_1">#ad7fa8</color>
+	<color name="tango_plum_2">#75507b</color>
+	<color name="tango_plum_3">#5c3566</color>
+	<color name="tango_chocolate_1">#e9b96e</color>
+	<color name="tango_chocolate_2">#c17d11</color>
+	<color name="tango_chocolate_3">#8f5902</color>
+	<color name="tango_scarlet_red_1">#ef2929</color>
+	<color name="tango_scarlet_red_2">#cc0000</color>
+	<color name="tango_scarlet_red_3">#a40000</color>
+	<color name="tango_aluminium_1">#eeeeec</color>
+	<color name="tango_aluminium_2">#d3d7cf</color>
+	<color name="tango_aluminium_3">#babdb6</color>
+	<color name="tango_aluminium_4">#888a85</color>
+	<color name="tango_aluminium_5">#555753</color>
+	<color name="tango_aluminium_6">#2e3436</color>
+
+	<style name="CalculationTangoTheme" parent="TangoTheme">
+	    <item name="actionBarStyle">@style/ButterActionBar</item> <!-- Support library compatibility -->
+	</style>
+	
+	<!-- consider the style TangoTheme as an abstract style used for keeping everything non dependent on version -->
+	<style name="TangoTheme" parent="Theme.AppCompat.Light">
+		<item name="android:windowBackground">@color/tango_butter_1</item>
+		<item name="android:colorBackground">@color/tango_butter_1</item>
+		<item name="android:colorForeground">@color/tango_butter_3</item>
+		<item name="android:textColorPrimary">@color/tango_sky_blue_3</item>
+    	
+<!-- 		<item name="android:windowBackground">@color/tango_aluminium_1</item> -->
+<!-- 		<item name="android:colorBackground">@color/tango_aluminium_1</item> -->
+<!-- 		<item name="android:colorForeground">@color/tango_aluminium_2</item> -->
+<!-- 		<item name="android:textColorPrimary">@color/tango_sky_blue_3</item> -->
+
+    	<item name="android:buttonStyle">@style/butter_button</item>
+    	<item name="android:alertDialogStyle">@style/DialogTango</item>
+    	<item name="android:spinnerItemStyle">@style/butter_spinner_item</item>
+      	<!--  item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item -->
+    	<!-- 		    
+        <item name="android:colorForegroundInverse">@color/tango_chocolate_3</item>
+		<item name="android:textColorSecondary">@color/tango_sky_blue_3</item>
+		<item name="android:textColorTertiary">@color/tango_scarlet_red_3</item>
+		<item name="android:textColorPrimaryInverse">@color/tango_plum_1</item>
+		<item name="android:textColorSecondaryInverse">@color/tango_sky_blue_1</item>
+		<item name="android:textColorTertiaryInverse">@color/tango_scarlet_red_1</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/tango_aluminium_5</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/tango_aluminium_2</item>
+        <item name="android:textColorPrimaryNoDisable">@color/tango_aluminium_6</item>
+        <item name="android:textColorSecondaryNoDisable">@color/tango_aluminium_6</item>
+        <item name="android:textColorPrimaryInverseNoDisable">@color/tango_aluminium_1</item>
+        <item name="android:textColorSecondaryInverseNoDisable">@color/tango_aluminium_1</item>
+        <item name="android:textColorHint">@color/tango_chameleon_3</item>
+        <item name="android:textColorHintInverse">@color/tango_chameleon_1</item>        
+        <item name="android:textColorHighlight">@color/tango_chameleon_3</item>
+        <item name="android:textColorLink">@color/tango_sky_blue_3</item>
+        -->
+	</style>
+	<style name="ButterActionBar"
+           parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@color/tango_butter_2</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/tango_butter_2</item>
+    </style>
+	<style name="butter_button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/butter_button_background_selector</item>
+        <item name="android:textColor">@drawable/butter_button_text_selector</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+	<style name="butter_spinner_item">
+        <item name="android:textColor">@drawable/butter_button_text_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+	
+	<!--  Could be used as style for spinner in main.xml but doesn't quite work out -->
+	<style name="butter_spinner" parent="@style/butter_button">
+		<item name="android:layout_width">45sp</item> <!-- for some reason, wrap_content is too broad -->
+        <item name="android:gravity">center|center_horizontal</item>
+    </style>
+	
+	<!--  Was meant as a neutral style where the color could be changed on the fly - no idea how to make it work -->
+	<style name="neutral_button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/neutral_button_background_selector</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+    
+	<style name="infolabel">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">left</item>
+   	    <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+			
+	<style name="infolabel.padded">
+<!-- 		<item name="android:minEms">2</item> TODO: 1 em is too little, 2 em too broad, without it, the width changes slightly as numbers changes -->
+		<item name="android:gravity">right</item>
+	</style>
+
+	<style name="infolabel.center">
+		<item name="android:gravity">center_horizontal</item>
+   	</style>
+
+	<style name="infolabel.left">
+		<item name="android:gravity">left</item>
+   	</style>
+
+	<style name="oplabel">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">right</item>
+   	    <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+    
+	<style name="oplabel.result">
+		<item name="android:inputType">number|numberSigned|numberDecimal</item>
+		<item name="android:maxEms">12</item>
+	</style>
+	
+	<style name="oplabel.equal">
+		<item name="android:gravity">center_horizontal</item>
+    </style>
+    	
+	<style name="hinttext">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:focusableInTouchMode">true</item>
+		<item name="android:linksClickable">true</item>
+		<item name="android:padding">5dp</item>
+   	    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+   	</style>
+</resources>
